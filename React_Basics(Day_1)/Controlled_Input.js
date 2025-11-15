@@ -1,27 +1,27 @@
 import { useState } from "react";
 
 function NameForm() {
-  // State to store the value of the input
-  const [name, setName] = useState("");
+    // State to store the value of the input
+    const [name, setName] = useState("");
 
-  // Handle form submission
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent page reload
-    alert(`Hello, ${name}!`);
-  };
+    // Handle form submission
+    const handleSubmit = (e) => {
+        e.preventDefault(); // Prevent page reload
+        alert(`Hello, ${name}!`);
+    };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      {/* Controlled input */}
-      <input
-        type="text"
-        value={name}              // Input value comes from state
-        onChange={e => setName(e.target.value)} // Update state on every keystroke
-        placeholder="Enter your name"
-      />
-      <button type="submit">Greet</button>
-    </form>
-  );
+    return (
+        <form onSubmit={handleSubmit}>
+            {/* Controlled input */}
+            <input
+                type="text"
+                value={name}              // Input value comes from state
+                onChange={e => setName(e.target.value)} // Update state on every keystroke
+                placeholder="Enter your name"
+            />
+            <button type="submit">Greet</button>
+        </form>
+    );
 }
 
 export default NameForm;
